@@ -32,5 +32,5 @@ journals_scored = merge(journals_scored,
   distinct(Journal, Management, .keep_all = TRUE)
 
 table(journals_scored$PubType)
-
+write_csv(journals_scored, './data/grouped_journals_scored.csv')
 
