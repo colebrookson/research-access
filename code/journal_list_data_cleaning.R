@@ -32,5 +32,26 @@ journals_scored = merge(journals_scored,
   distinct(Journal, Management, .keep_all = TRUE)
 
 table(journals_scored$PubType)
-write_csv(journals_scored, './data/grouped_journals_scored.csv')
+#write_csv(journals_scored, './data/grouped_journals_scored.csv')
+
+# NOTE -- did a manual assessment of the 'relevance' of the different items
+#         in the `grouped_journals_scored.csv` by hand. This allowed us to keep
+#         items that were relevant but were coded as not being 'J'-type items
+
+grouped_journals = read_csv(here('./data/grouped_journals_scored.csv'))
+
+grouped_journals_manag = grouped_journals %>% 
+  filter(Relevance == 1) %>% 
+  filter(Management == 1)
+
+  
+
+
+
+
+
+
+
+
+
 
