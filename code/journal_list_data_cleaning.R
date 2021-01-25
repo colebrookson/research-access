@@ -2,7 +2,10 @@
 ##########
 # This code contains some data cleaning/summary statistics tasks presented in
 # in Brookson & Davis (in Prep) 
-# A review on the accessibility of conservation-based research
+##########
+##########
+# Data management script to access journal ISSNs for 
+# review on the accessibility of conservation-based research
 ##########
 ##########
 # AUTHOR: Cole B. Brookson
@@ -16,6 +19,8 @@ library(here)
 journals_scored = read_csv(here('./data/journals_scored.csv'))
 all_papers = read_csv(here('./data/all_papers.csv'),
                       guess_max = 50000)
+full_records = read_csv(here('./data/combined_review_papers.csv'),
+                        guess_max = 50000)
 
 #get the type of the publication into the journals_scored dataframe
 all_papers$Journal = as.factor(all_papers$Journal)
@@ -44,7 +49,7 @@ grouped_journals_manag = grouped_journals %>%
   filter(Relevance == 1) %>% 
   filter(Management == 1)
 
-  
+
 
 
 
