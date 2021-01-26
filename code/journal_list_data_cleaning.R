@@ -49,13 +49,27 @@ grouped_journals_manag = grouped_journals %>%
   filter(Relevance == 1) %>% 
   filter(Management == 1)
 
+full_records_issns = full_records %>% 
+  filter(!is.na(SN)) %>% 
+  select(`J9`, SN, BN, EI)
 
+grouped_journals_manag = 
+  merge(grouped_journals_manag, full_records_issns, 
+        by.x = 'Journal', by.y = 'J9') 
+grouped_journals_manag$Journal = as.factor(grouped_journals_manag$Journal)
 
+n_distinct(grouped_journals_manag$Journal)
+# get rid of duplicated elements
+grouped_journals_manag = 
+  grouped_journals_manag[!duplicated(grouped_journals_manag),]
 
+n_distinct(journals_scored$Journal)
 
+journals_scored$Journal = as.factor(journals_scored$Journal)
 
-
-
+x = journals_scored %>% 
+  filter(Management == 1)
+n_distinct(x$Journal)
 
 
 
