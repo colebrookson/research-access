@@ -23,6 +23,8 @@ all_papers = read_csv(here('./data/all_papers.csv'),
                       guess_max = 50000)
 full_records = read_csv(here('./data/combined_review_papers.csv'),
                         guess_max = 50000)
+open_access = read_csv(here('./data/combined_open_access_review_papers.csv'))
+doaj_access = read_csv(here('./data/journalcsv__doaj_20210126_1836_utf8.csv'))
 
 #get the type of the publication into the journals_scored dataframe
 all_papers$Journal = as.factor(all_papers$Journal)
@@ -57,15 +59,32 @@ full_records_issns = full_records %>%
 grouped_journals_manag_issns = 
   merge(grouped_journals_manag, full_records_issns, 
         by.x = 'Journal', by.y = 'SO') %>% 
-  distinct(Journal, SN, .keep_all = TRUE) #%>%
-  #filter(!is.na(SN))
-  
+  distinct(Journal, SN, .keep_all = TRUE)
 
+doaj_access = doaj_access %>% 
+  filter(`DOAJ Seal` == 'Yes')
+  
+grouped_journals_manag_issns = grouped_journals_manag_issns %>% 
+  rowwise() %>% 
+  mutate(open_access = 
+           ifelse(SN %in% doaj_access$`Journal ISSN (print version)` |
+                    SN %in% doaj_access$`Journal EISSN (online version)`, 
+                          1, 0))
 
 
 missing_journals = grouped_journals_manag %>% 
   filter(Journal %notin% grouped_journals_manag_issns$Journal)
+# NOTE -- found the ISSNs manually for the missing journals and input them
+#         into the dataframe. They are now present for every journal except
+#         one. They were manually searched for on Web of Science Journals and
+#         then secondarily on the broader internet
 
+missing_journals = missing_journals %>% 
+  rowwise() %>% 
+  mutate(open_access = 
+           ifelse(SN %in% doaj_access$`Journal ISSN (print version)` |
+                    SN %in% doaj_access$`Journal EISSN (online version)`, 
+                  1, 0))
 
 n_distinct(grouped_journals_manag$Journal)
 # get rid of duplicated elements
