@@ -1,0 +1,34 @@
+---
+layout: 12pt,review
+linenumbers: true
+title: "The Echo Chamber of the Ivory Tower: How Ecological Research Intended For The Applied Sphere Never Actually Makes It There"
+author: 
+  - name: Cole B. Brookson
+    affiliation: uab
+    email: cole.brookson(at)gmail.com
+    footnote: Corresponding author
+  - name: Alexandra C.D. Davis
+    affiliation: uab
+address: 
+  - code: uab
+    address: | 
+      Department of Biological Sciences, 
+      University of Alberta, 
+      Edmonton, AB, CAN
+abstract: |
+
+keywords:
+
+
+bibliography: components/references.bib
+csl: components/ecology.csl
+documentclass: components/elsarticle
+
+## rmarkdown render options
+output:
+  pdf_document:
+    fig_caption: true
+    template: components/elsarticle.latex
+    keep_tex: true
+
+---
