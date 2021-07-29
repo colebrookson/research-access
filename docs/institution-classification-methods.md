@@ -1,4 +1,4 @@
-# Methods on How Institutions were classified and Accessed
+# Methods on How Institutions were Classified and Accessed
 
 ## Universities
 
