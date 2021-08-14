@@ -5,7 +5,7 @@ def validate_cISSN(issn:str) -> bool:
     """
     assert type(issn) == str, "issn must be a string"
 
-    VALID_C = False
+    isVALID_C = False
     issn_num = issn[:4] + issn[5:-1]
     issn_c = issn[-1]
 
@@ -24,7 +24,7 @@ def validate_cISSN(issn:str) -> bool:
         c = 11-mod
         if c == 10: c = 'X'
 
-    if str(c) == issn_c: VALID_C = True
+    if str(c) == issn_c: isVALID_C = True
 
-    return VALID_C
+    return isVALID_C
 
