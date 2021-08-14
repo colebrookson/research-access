@@ -30,6 +30,7 @@ def getData(client:gspread.Client, file:str, by:str="name", sheetNum:int=0) -> "
     assert type(sheetNum) == int and sheetNum >= 0, "sheetNum must be an int and at least 0"
     assert by in ["name", "id", "url"], "by must be one of name, id or url"
 
+    # open file
     if by == "name":
         sheets = client.open(file)
     elif by == "id":
@@ -37,6 +38,7 @@ def getData(client:gspread.Client, file:str, by:str="name", sheetNum:int=0) -> "
     elif by == "url":
         sheets = client.open_by_url(file)
 
+    # get the data from the specific sheet
     data = sheets.get_worksheet(sheetNum)
     data = data.get_all_records()
 
