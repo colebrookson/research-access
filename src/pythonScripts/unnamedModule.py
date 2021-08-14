@@ -8,6 +8,7 @@ def authenticateGDrive(jsonFilename:str) -> gspread.Client:
     returns: authorised client as gspread.Client object
     """
     assert type(jsonFilename) == str, "jsonFilename must be a str"
+    assert jsonFilename.endswith(".json"), f"{jsonFilename} is not a .json file"
 
     scope = ["https://spreadsheets.google.com/feeds",
             "https://www.googleapis.com/auth/spreadsheets",
