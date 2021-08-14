@@ -6,6 +6,8 @@ def authenticateGDrive(jsonFilename):
     Authorises API client information from jsonFilename with Google Cloud Platform
     returns: authorised client as gspread.Client object
     """
+    assert type(jsonFilename) == str, "jsonFilename must be a str"
+    
     scope = ["https://spreadsheets.google.com/feeds",
             "https://www.googleapis.com/auth/spreadsheets",
             "https://www.googleapis.com/auth/drive.file",
