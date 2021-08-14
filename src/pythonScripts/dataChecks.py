@@ -25,5 +25,3 @@ def validate_cISSN(issn:str) -> bool:
 
     return VALID_C
 
-
-print(validate_cISSN("0046-225X"))
