@@ -15,7 +15,8 @@ def validate_cISSN(issn:str) -> bool:
         inv_index -= 1
 
     mod = issn_num_sum%11
-    if mod == 0: c = 0
+    if mod == 0: 
+        c = 0
     else:
         c = 11-mod
         if c == 10: c = 'X'
