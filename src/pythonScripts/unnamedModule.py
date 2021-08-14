@@ -1,13 +1,14 @@
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+from typing import List
 
-def authenticateGDrive(jsonFilename):
+def authenticateGDrive(jsonFilename:str) -> gspread.Client:
     """
     Authorises API client information from jsonFilename with Google Cloud Platform
     returns: authorised client as gspread.Client object
     """
     assert type(jsonFilename) == str, "jsonFilename must be a str"
-    
+
     scope = ["https://spreadsheets.google.com/feeds",
             "https://www.googleapis.com/auth/spreadsheets",
             "https://www.googleapis.com/auth/drive.file",
@@ -17,7 +18,7 @@ def authenticateGDrive(jsonFilename):
 
     return client
 
-def getData(client, file="", by="name", sheetNum=0):
+def getData(client:gspread.Client, file:str, by="name", sheetNum=0) -> List[dict]:
     """
     gets data from sheetNum of file using an authenticated Google Cloud Platform client object
     - client = gspread.Client class 
@@ -39,5 +40,3 @@ def getData(client, file="", by="name", sheetNum=0):
     data = data.get_all_records()
 
     return data
-
-
