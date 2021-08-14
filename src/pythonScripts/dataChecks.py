@@ -1,5 +1,8 @@
 def validate_cISSN(issn:str) -> bool:
-
+    """
+    Validates the last character (c) of the ISSN number, based on the first 7 digits
+    returns: boolean: True if c is valid False otherwise
+    """
     assert type(issn) == str, "issn must be a string"
 
     VALID_C = False
