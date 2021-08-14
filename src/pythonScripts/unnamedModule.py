@@ -19,7 +19,7 @@ def authenticateGDrive(jsonFilename):
 
 def getData(client, file="", by="name", sheetNum=0):
     """
-    gets data from sheetNum of file using an authenticated Google Cloud Platform client
+    gets data from sheetNum of file using an authenticated Google Cloud Platform client object
     - client = gspread.Client class 
     returns: list of each row in the spreadsheet as a dict with each col as key
     - example: [{"Serial No": 0, "Name": "Abby"}, {"Serial No": 1, "Name": "Jason"}]
