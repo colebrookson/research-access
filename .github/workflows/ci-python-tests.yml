@@ -8,7 +8,7 @@ name: Python application
 on:
   push:
     paths:
-    - 'src/pythonScripts/**'
+    - 'src/pythonScripts/modules**'
     branches: [ master ]
 
 jobs:
@@ -36,5 +36,5 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
-        
-  
+
+
