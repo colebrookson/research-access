@@ -35,5 +35,3 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: execute data-tests.py
       run: python src/pythonScripts/workflow-scripts/data-tests.py
-
-        pytest
