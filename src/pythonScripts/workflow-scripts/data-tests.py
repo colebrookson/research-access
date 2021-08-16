@@ -2,5 +2,5 @@
 
 PATH = "data//from-GDrive//mainDB.csv"
 fh = open(PATH)
-print(fh1)
+print(fh)
 
