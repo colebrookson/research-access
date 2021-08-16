@@ -1,6 +1,1 @@
-gspread
-oauth2client
 pandas
-numpy
-json
-pygithub
