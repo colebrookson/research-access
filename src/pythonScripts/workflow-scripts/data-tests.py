@@ -1,4 +1,6 @@
 # this script should run every time there is a new push to the data folder
+import pandas as pd 
+
 PATH_mainDB = "data//from-GDrive//mainDB.csv"
 fh = open(PATH_mainDB)
 
