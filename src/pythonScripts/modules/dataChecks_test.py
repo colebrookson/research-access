@@ -14,7 +14,7 @@ def test_check_notes() -> None:
     pass
 
 def test_validate_cISSN() -> None:
-    assert validate_cISSN("0046-225X") == True
+    assert validate_cISSN("0046-225X") == False
     assert validate_cISSN("0091-6765") == True
     assert validate_cISSN("0091-676X") == False
     assert validate_cISSN("1313-4131") == False
