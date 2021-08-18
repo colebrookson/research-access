@@ -75,7 +75,7 @@ We would be happy to participate, depending on the level of information you are 
 I've copied Tami Morse, our Cataloging Librarian, she can help with the technical aspects of mining our catalog.
 ```
 
-In this case, our job is easy - simply respond in a timely fashion, clarifying what exactly we're looking for and 
+In this case, our job is easy - simply respond in a timely fashion, clarifying what exactly we're looking for and attaching the list of ISSNs in the `.csv` file. 
 
 
 
