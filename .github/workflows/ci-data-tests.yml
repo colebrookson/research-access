@@ -6,10 +6,9 @@
 name: Python application
 
 on:
-  push:
-    paths:
-    - 'data/**'
-    branches: [ master ]
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 13 * * 1'
 
 jobs:
   build:
