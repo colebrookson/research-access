@@ -6,6 +6,8 @@ If you are emailing an institution, this document will serve as your primary gui
 * The university contact sheet: *Collated University Contact Data*
 * The Gov/NGO contact sheet: *Collated Gov/NGO Contact Sheet*
 
+Before you send any emails, look through the existing emails that have already been sent to get a handle on some common exchanges/questions/patterns that cases have displayed thus far. Also, look through the various stock emails (at the bottom of this document) to familiarize yourself with how we can respond to different cases. 
+
 ## The Contact Process
 
 For the purposes of this example, we'll refer to the process of contacting a single institution as a *case*. There are four main steps in the contact process: 
@@ -31,6 +33,38 @@ For the purposes of this example, we'll refer to the process of contacting a sin
 ![Description \label{Email}](images/email.png)
 
 * Send emails in the MORNING always! If you are working at a different time, use the schedule send function via the "down" arrow beside the "Send" button, to schedule a time - **initial weekdays should always be sent on weekdays, and should be scheduled to go out at 7:49AM EST**
+
 * Once the email is sent/scheduled, add a label with your name (as the `Cole-corresponds` example here)
 
+* Change the contact sheet information with the relevant information:
+    * The `Status` column should now read `6` which codes for "Waiting for Response"
+    * Change the `Contacted?`, `Date Contacted` and `Contact Individual` columns to reflect the relevant information (note: contact individual is you)
+
 First step done :)  
+
+### 2. Ongoing Liasing 
+
+This tends to be the longest part of the process. Typically about 50% of institutions will respond promptly (w/in 3-5 business days). 
+
+If the given institution *does* respond, they will likely respond in one of three ways: 
+1. They will agree to provide some type of help and may ask a few follow-up questions
+2. They will decline any help, usually citing some capacity shortages
+3. They will suggest they have limited capactiy to help, and will offer alternatives and/or ask for more details on what we need. 
+
+Here is how to respond to each: 
+
+#### Some Type of Help 
+
+An ideal form of response in this case looks like this: 
+
+```
+Good Afternoon Mr. Brookson,
+
+Thank you for reaching out to the US Geological Survey Library.
+
+We would be happy to participate, depending on the level of information you are seeking and our ability to comply.
+
+I've copied Tami Morse, our Cataloging Librarian, she can help with the technical aspects of mining our catalog.
+```
+
+In this case, our job is easy - simply respond in a timely fashion, clarifying what exactly we're looking for and 
