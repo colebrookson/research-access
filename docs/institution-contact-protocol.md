@@ -79,7 +79,11 @@ In this case, our job is easy - simply respond in a timely fashion, clarifying w
 
 
 
+--------------------------------------------------------------------------------
+### 4. Case Conclusion 
+--------------------------------------------------------------------------------
 
+* add that we need to set a new task for data cleaning 
 
 
 --------------------------------------------------------------------------------
