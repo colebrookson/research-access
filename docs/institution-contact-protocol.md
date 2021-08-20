@@ -190,8 +190,9 @@ To create a new label:
 
 ![Description \label{Email2}](images/alex_email2.png)
 
-Please try and choose a distinct colour from the ones in use. You can even create your own label colour
-*Please note that Cole is associated wtih the colour orange, and any cases that are completed have some blue in the label
+Please try and choose a distinct colour from the ones in use. You can even create your own label colour.
+
+*Please note that Cole is associated wtih the colour orange, and any cases that are completed have some blue in the label*
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
