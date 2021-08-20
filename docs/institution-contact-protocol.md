@@ -194,6 +194,8 @@ Please try and choose a distinct colour from the ones in use. You can even creat
 
 *Please note that Cole is associated wtih the colour orange, and any cases that are completed have some blue in the label*
 
+![Description \label{Email}](images/alex_email3.png)
+
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 ## The Stock Emails
