@@ -129,7 +129,7 @@ If they agree to sending us a batch file, that's great! We thank them profusely,
 
 #### 3. Suggest they have limited capactiy to help, and will offer alternatives 
 
-This is usually the longest type of exchange we can have with institutions. Some have gone as far as giving us temporary log-in information so we can go into their library websites and find the information ourselves. 
+This is usually the longest type of exchange we can have with institutions. Some have gone as far as giving us temporary log-in information so we can go into their library websites and find the information ourselves. These emails are VERY variable, but they will often propose a solution similar to the one we actually want which is to send us all of their collections information.
 
 Again, we want ideally for them to accept our list of ISSNs, and return data on their access. If that's not possible, then a full list of their holdings is the next best thing. The third option of them just sending us a website link to search through ourselves is the worst option, but better than nothing. 
 
@@ -141,12 +141,34 @@ Again, we want ideally for them to accept our list of ISSNs, and return data on 
 
 In the case that they agreed to give us data, either batch data or the ISSN-specific data, we need to deal with that once it comes into the email. 
 
+We first go to the `Collected Data` folder in the Google Drive, and enter the `data from institutions` subfolder. Next, go into the `raw` subfolder (all these data need to be cleaned before they can be used). 
+
+Since many institutions will send us multiple files, we always make a subfolder for the institution at hand. Keeping with our previous example, if we need to make a folder for McGill, we create a new folder called `McGill` (no spaces in any folder names!), and upload the data from Gmail to this folder. 
+
+**As always, update the institution status at this point**
+
 --------------------------------------------------------------------------------
 ### 4. Case Conclusion 
 --------------------------------------------------------------------------------
 
-* add that we need to set a new task for data cleaning 
+Now, we've finished all our liasing with the institution, and we've changed the status inthe google sheet. *Importantly*, we have to make a new task in the `Task Organization` spreadsheet. To do this, simply add to the `Task` column and the `Institution (if applicable)` columns. 
 
+![Description \label{Email}](images/mcgill.png)
+
+Done! We've concluded the case! :)
+
+--------------------------------------------------------------------------------
+### Troubleshooting 
+--------------------------------------------------------------------------------
+
+You will 100% encounter a situation where a contact says something or asks a question and you don't know how to respond. **DO NOT PANIC :)**
+
+Steps to troubleshoot:
+
+1. *Read through previous exchanges.* It's possible someone has already posed that problem and and an answer has been given. 
+2. *Ask in the `library-contact` channel*. No harm in asking! If someone else has fielded and answered a similar question they can chime in. If no one has yet, Cole will provide the information needed to address the issue. 
+
+*Note it's always better to wait a few days to answer the email after clarifying what the response should be, then to respond quickly and then have to backtrack.*
 
 --------------------------------------------------------------------------------
 ## Email Organization
@@ -161,9 +183,8 @@ In the case that they agreed to give us data, either batch data or the ISSN-spec
 ### Intial Email
 
 * Change name as needed - use "Hi there" for general emails (i.e. no specific person)
-* 
 
-#### Subject: Request for Library Collections Information
+`Subject: Request for Library Collections Information`
 ```
 Dear Dr. Soandso/Hi there,
 
@@ -212,6 +233,34 @@ I've attached the list of ISSNs we're interested in here. Please let me know if 
 Thanks again!
 Cole
 ```
-**Attach file of ISSNs**
+`**Attach file of ISSNs**`
 
+### Response to Decline 
+
+Example declination: 
+```
+Hi Mr. Brookson,
+
+Unfortunately we do not have the staff nor resources to help you at this time. 
+
+All the best in your research project. 
+
+-Anita
+```
+------
+Our response:
+``` 
+Hi Anita,
+
+Thanks so much for getting back to us. Completely understandable re: resources/staff. I have one quick follow-up question for you. 
+
+I know you don't have the resources to help with the actual search, but I'm still wondering if it would be possible for us to get some data from your institution. 
+One thing we've done with other institutions is they have just sent us a data dump of essentially their entire collection holdings information for us to sort through. 
+With regardards to that, all we need is a list of all print/electronic periodical titles you have access to in full-text. We can search through that list programmatically to find the ISSNs we're interested in. 
+
+If that's not possible, I wonder if as a last resort, there is somewhere on your library website you could direct me to where we could manually search for each ISSN ourselves?
+
+Thanks so much,
+Cole
+```
 
