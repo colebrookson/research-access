@@ -176,7 +176,7 @@ Steps to troubleshoot:
 ### Please check the slack channel "library-contact" for login information for the share email account
 
 
-In order to keep things organzied in the share email account we will be using specific labels and colors to denote individuals.
+In order to keep things organzied in the shared email account we will be using specific labels and colours to denote individuals.
 
 Labels are organized alphabetically on the side panel in the email browser, and also appear in the list of emails.
 
