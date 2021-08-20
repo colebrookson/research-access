@@ -178,7 +178,7 @@ In order to keep things organzied in the share email account we will be using sp
 ![Description \label{Email}](images/alex_email1.jpeg)
 
 
-![Description \label{Email}](alex_email2.jpeg)
+![Description \label{Email}](images/alex_email2.jpeg)
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 ## The Stock Emails
