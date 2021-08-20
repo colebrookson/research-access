@@ -80,7 +80,6 @@ def main():
     #     # upload sheet to GitHub repo
     #     # merge sheet to mainDB.csv
 
-    #     pass
 
 
     sheetID = CLEANED_SHEETS_IDs["fromInst"][0]
