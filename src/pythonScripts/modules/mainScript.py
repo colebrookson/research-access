@@ -93,10 +93,10 @@ def main():
     if not correctCols: raise dc.DataChecksException("DataFrame columns are not ['journal', 'issn', 'access', 'notes'].", sheetID, "correctCols", "")
     if not noDuplicates: raise dc.DataChecksException("DataFrame contains duplicates.", sheetID, "correctCols", "")
 
-    # hasNaN, detail = dc.hasNaN(df)
-    # if hasNaN:
-    #     detail = "NaN values found in columns: " + str(detail)
-    #     raise dc.DataChecksException(f"DataFrame contains NaN values", sheetID, "hasNaN", detail)
+    hasNaN, detail = dc.hasNaN(df)
+    if hasNaN:
+        detail = "NaN values found in columns: " + str(detail)
+        raise dc.DataChecksException(f"DataFrame contains NaN values", sheetID, "hasNaN", detail)
 
     allJournalsCounted, detail = dc.allJournalsCounted(df, ALL_JOURNAL_ISSN)
     if allJournalsCounted == False:
