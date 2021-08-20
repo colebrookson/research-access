@@ -38,7 +38,7 @@ For the purposes of this example, we'll refer to the process of contacting a sin
 
 ![Description \label{Email}](images/email.png)
 
-* Send emails in the MORNING always! If you are working at a different time, use the schedule send function via the "down" arrow beside the "Send" button, to schedule a time - **initial weekdays should always be sent on weekdays, and should be scheduled to go out at 7:49AM EST**
+* Send emails in the MORNING always! If you are working at a different time, use the schedule send function via the "down" arrow beside the "Send" button, to schedule a time - **initial emails should always be sent on weekdays, and should be scheduled to go out at 7:49AM EST**
 
 * Once the email is sent/scheduled, add a label with your name (as the `Cole-corresponds` example here)
 
