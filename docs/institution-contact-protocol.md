@@ -183,14 +183,14 @@ To create a new label:
 2. Scroll down and click "Create new label" 
 3. Enter "yourname-corresponds" into the type box and hit create
 4. Designate your individual color
-4a.   Click on the three dots
-4b.   Hover over "Label Colour"
-4c.   Pick your colour!
+* Click on the three dots
+* Hover over "Label Colour"
+* Pick your colour!
 
 ![Description \label{Email2}](images/alex_email2.png)
 
 Please try and choose a distinct colour from the ones in use. You can even create your own label
-** please note that Cole is associated wtih the color orange, and any cases that are completed have some blue in the label
+# please note that Cole is associated wtih the color orange, and any cases that are completed have some blue in the label
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
