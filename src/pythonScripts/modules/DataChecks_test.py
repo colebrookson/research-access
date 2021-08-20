@@ -1,4 +1,4 @@
-from dataChecks import *
+from DataChecks import *
 import pytest
 
 def test_check_issn() -> None:
