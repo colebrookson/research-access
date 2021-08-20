@@ -61,7 +61,7 @@ If the given institution *does* respond, they will likely respond in one of thre
 
 Here is how to respond to each: 
 
-#### Some Type of Help 
+#### 1. Some Type of Help 
 
 An ideal form of response in this case looks like this: 
 
@@ -77,6 +77,36 @@ I've copied Tami Morse, our Cataloging Librarian, she can help with the technica
 
 In this case, our job is easy - simply respond in a timely fashion, clarifying what exactly we're looking for and attaching the list of ISSNs in the `.csv` file. 
 
+```
+Hi Holly & Tami,
+
+Thanks so much for getting back to me! That would be amazing. So essentially all we really need in terms of information is, for each ISSN, a) whether or not you have access, b) ideally the time you have access to the journal from (e.g. 1993-Present) and that's pretty much it. Would that be possible?
+
+I've attached the list of ISSNs we're interested in here. Please let me know if there is any other information I can provide that would be helpful!
+
+Thanks again!
+Cole
+**Attached file**
+```
+
+#### 2. Decline with no Help
+
+Typically that type of email will look like the following:
+
+```
+Hi Mr. Brookson,
+
+Unfortunately we do not have the staff nor resources to help you at this time. 
+
+All the best in your research project. 
+
+-Anita
+```
+
+Our goal now is not to make further asks that we are unlikely to be granted, but to find some way to get information from the institution. We want to offer two alternatives and hope they agree on the first but sometimes only will have the second: 
+
+1. They agree to send us a batch file of their entire holdings collection OR
+2. They have a link (i.e. somewhere on their library website) that we can look through ourselves 
 
 
 --------------------------------------------------------------------------------
