@@ -108,6 +108,38 @@ Our goal now is not to make further asks that we are unlikely to be granted, but
 1. They agree to send us a batch file of their entire holdings collection OR
 2. They have a link (i.e. somewhere on their library website) that we can look through ourselves 
 
+So, a typical reply can look like this: 
+
+``` 
+Hi Anita,
+
+Thanks so much for getting back to us. Completely understandable re: resources/staff. I have one quick follow-up question for you. 
+
+I know you don't have the resources to help with the actual search, but I'm still wondering if it would be possible for us to get some data from your institution. 
+One thing we've done with other institutions is they have just sent us a data dump of essentially their entire collection holdings information for us to sort through. 
+With regardards to that, all we need is a list of all print/electronic periodical titles you have access to in full-text. We can search through that list programmatically to find the ISSNs we're interested in. 
+
+If that's not possible, I wonder if as a last resort, there is somewhere on your library website you could direct me to where we could manually search for each ISSN ourselves?
+
+Thanks so much,
+Cole
+```
+
+If they agree to sending us a batch file, that's great! We thank them profusely, and turn that data over to the folks doing data cleaning to be dealt with. If they decline the first option but do give us a link, same process, thank them and turn over the link. 
+
+#### 3. Suggest they have limited capactiy to help, and will offer alternatives 
+
+This is usually the longest type of exchange we can have with institutions. Some have gone as far as giving us temporary log-in information so we can go into their library websites and find the information ourselves. 
+
+Again, we want ideally for them to accept our list of ISSNs, and return data on their access. If that's not possible, then a full list of their holdings is the next best thing. The third option of them just sending us a website link to search through ourselves is the worst option, but better than nothing. 
+
+**Recall that at every stage of this process, you need to be updating the status code in the Contact sheet**
+
+--------------------------------------------------------------------------------
+### 3. Data Acquisition
+--------------------------------------------------------------------------------
+
+In the case that they agreed to give us data, either batch data or the ISSN-specific data, we need to deal with that once it comes into the email. 
 
 --------------------------------------------------------------------------------
 ### 4. Case Conclusion 
