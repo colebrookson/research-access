@@ -173,11 +173,24 @@ Steps to troubleshoot:
 --------------------------------------------------------------------------------
 ## Email Organization
 --------------------------------------------------------------------------------
-In order to keep things organzied in the share email account we will be using specific labels and colors to 
+In order to keep things organzied in the share email account we will be using specific labels and colors to denote individuals
+Label are organized alphabetically on the side panel in the email browser, and also appear in the list of emails.
 
 ![Description \label{Email}](images/alex_email1.png)
 
+To create a new label:
+1. Click the "More" tab
+2. Scroll down and click "Create new label" 
+3. Enter "yourname-corresponds" into the type box and hit create
+4. Designate your individual color
+4a.   Click on the three dots
+4b.   Hover over "Label Colour"
+4c.   Pick your colour!
+
 ![Description \label{Email2}](images/alex_email2.png)
+
+Please try and choose a distinct colour from the ones in use. You can even create your own label
+** please note that Cole is associated wtih the color orange, and any cases that are completed have some blue in the label
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
