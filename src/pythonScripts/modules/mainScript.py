@@ -138,8 +138,8 @@ def main():
             detail = "mismatched journals: " + str(detail)
             raise dc.DataChecksException(f"Journal and ISSN mismatch found in DataFrame", sheetID, "journalsMatchISSN", detail)
 
-
-        addNewUniToRepo(repo, df, "ualberta.csv")
+        uniName = pass
+        addNewUniToRepo(repo, df, uniName)
 
         df = addUniCol("ualberta", df)
 
