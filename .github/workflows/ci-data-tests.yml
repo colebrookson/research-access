@@ -34,4 +34,6 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: execute data-tests.py
-      run: python src/pythonScripts/workflow-scripts/data-tests.py
+      run: python src/pythonScripts/modules/mainScriptDebug.py
+      env:
+        GIT_TOKEN_SECRETS: ${{ secrets.GIT_TOKEN_SECRET }}
