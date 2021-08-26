@@ -1,6 +1,9 @@
-gspread
-oauth2client
-pandas
-numpy
-pygithub
-
+PyGithub == 1.55
+google_api_python_client == 2.17.0
+google_auth_oauthlib == 0.4.1
+gspread == 4.0.1
+oauth2client == 4.1.3
+pandas == 1.1.4
+protobuf == 3.13.0
+pytest == 6.2.4
+numpy == 1.18.1
