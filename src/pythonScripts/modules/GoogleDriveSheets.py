@@ -27,7 +27,18 @@ class Handler:
 
     def getDriveService(self):
         return self.driveService
+    
+    def getRepo(self, repoDir):
+        return self.gitService.get_repo(repoDir)
 
+    def getSheetObject(self, sheetID):
+        """
+        Returns the first sheet object (not the data on it) using sheetID
+        """
+        sheetsFile = self.getSheetsDriveClient().open_by_key(sheetID)
+        sheet = sheetsFile.get_worksheet(0)
+        return sheet
+    
     def authenticateDriveSheetsAPIKeys(self, jsonFilename:str) -> "gspread.Client":
         """
         Authorises API keys for Google Drive and Google Sheets APIs
@@ -99,12 +110,3 @@ class Handler:
             nextPageToken = response.get('nextPageToken')
 
         return files
-
-    def getRepo(self, repoDir):
-        return self.gitService.get_repo(repoDir)
-
-
-
-
-
-
