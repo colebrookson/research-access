@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 
 class DataChecksException(Exception):
 
@@ -64,57 +65,76 @@ def validate_cISSN(issn:str) -> bool:
 
     return str(c) == issn_c
 
+def hasAllColumns(df:pd.core.frame.DataFrame) -> "tuple(bool, bool, bool)":
+    """
+    Checks if there are any missing columns in the df
+    returns: (True, [missing cols]) if missing cols present, (False, []) otherwise
+    """
+    COLS = ["journal", "issn", "access", "notes"]
+    df_cols = []
+    hasAllCols = True
+    missingCols = []
+    for col in list(df.columns):
+        col = str(col)
+        col = "".join(col.split())
+        df_cols.append(col)
+    for col in COLS:
+        hasAllCols = col in df_cols
+        if not hasAllCols: missingCols.append(col)
 
-# print(validate_cISSN("0046-225X"))
+    return hasAllCols, missingCols
+
+def noDuplicates(df):
+    """
+    Checks if there are any duplicated rows in the df
+    """
+    noDuplicates = list(df.duplicated().unique()) == [False]
+
+    return noDuplicates
 
 
-def hasNaN(df, includeNotes=False):
+def hasNaN(df:pd.core.frame.DataFrame, includeNotes=False) -> "tuple(bool, list)":
     """
     Checks if there are any missing values in each column of the df
     returns: (True, [cols with missing values]) if missing values present in any column, (False, []) otherwise
     """
-
-    def replaceNaN(df, *args:list):
-        """
-        Replaces each argument with np.nan in df
-        """
-        for i in args:
-            newDf = df.replace(i, np.nan, inplace=False)
-        return newDf
-
     if not includeNotes:
-        dF = df.drop("notes", inplace=False, axis=1)
-    oddWords = ["missing", "MISSING", "Missing", "null", "Null", "None", "NULL", "N/A", "n/a", "-", '', " ", "x", np.inf]
-    newDf = replaceNaN(dF, oddWords)
+        df = df.drop("notes", inplace=False, axis=1)
 
-    isNullsCols = {}
+    df.fillna(value=np.nan, inplace=True) # for replacing None values (.replace does not work with None)
+    oddWords = ["missing", "MISSING", "Missing", "null", "Null", "NULL",
+                "None", "none", "NONE", "N/A", "n/a", "-", '', ' ',
+                "  ", "   ", "x", np.inf]
+    for word in oddWords:
+        df.replace(word, np.nan, inplace=True)
+
+    isnullCols = {}
     hasNaNCols = []
     hasNaN = False
-    for col in newDf.columns:
-        isNullsCols[col] = newDf[col].isnull().unique()
-        if (True in isNullsCols[col]):
+    for col in df.columns:
+        isnullCols[col] = df[col].isnull().unique()
+        if (True in isnullCols[col]):
             hasNaN = True
             hasNaNCols.append(col)
 
     return hasNaN, hasNaNCols
 
-def allJournalsCounted(df, allJournals):
+def allJournalsCounted(df:pd.core.frame.DataFrame, allJournals:list) -> "tuple(bool, list)":
     """
     Checks if all journals are recorded for a university df
     returns: (True, []) if all journals are present, (False, [uncountedJournals]) otherwise
     """
     df_journals = list(df["journal"])
-    all_Journals = list(allJournals["journal"])
     uncountedJournals = []
     allAreCounted = True
-    for journal in all_Journals:
+    for journal in allJournals:
         if journal not in df_journals:
-            allAreCounted[0] = False
+            allAreCounted = False
             uncountedJournals.append(journal)
 
     return allAreCounted, uncountedJournals
 
-def journalsMatchISSN(gtruth_df, observed_df):
+def journalsMatchISSN(gtruth_df:pd.core.frame.DataFrame, observed_df:pd.core.frame.DataFrame) -> "tuple(bool, list)":
     """
     Compares the journal, ISSN pairing in gtruth_df with observed_df to check if they match.
     Both parameters require pd.DataFrames with two columns (journal, issn).
@@ -130,14 +150,5 @@ def journalsMatchISSN(gtruth_df, observed_df):
             mismatchedJournals.append(j)
 
     return noMismatch, mismatchedJournals
-
-def basicChecks(df):
-    SHAPE = (1372, 4)
-    COLS = ["journal", "issn", "access", "notes"]
-    correctShape = df.shape == SHAPE
-    correctCols = list(df.columns) == COLS
-    noDuplicates = list(df.duplicated().unique()) == [False]
-
-    return correctShape, correctCols, noDuplicates
 
 
