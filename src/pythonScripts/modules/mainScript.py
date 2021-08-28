@@ -120,7 +120,7 @@ def updateSheetOnDrive(handler, sheetID, ALL_CLEANED_SHEETS):
 def main():
 
     # authenticating Drive, Sheets and GitHub API keys
-    sheetsDriveJson = "creds.json"
+    sheetsDriveJson = "research-access/src/pythonScripts/modules/creds.json"
     driveServiceJson = "client_secrets_GDrive-oauth2.json"
     gitToken = os.environ.get("GIT_TOKEN_SECRET")
     handler = gds.Handler(sheetsDriveJson, driveServiceJson, gitToken)
