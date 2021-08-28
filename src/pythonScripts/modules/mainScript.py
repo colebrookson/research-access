@@ -8,7 +8,7 @@ from io import BytesIO
 def getAllFileIDs(handler):
     """
     Gets all file IDs from the Google Drive folders (raw, clean, byHand)
-    returns: cleaned{"byHand":[{id:name}, {id:name}, ...],"fromInst":[{id:name}, {id:name}, ...]}, raw[ids]
+    returns: cleaned{"byHand":{{id:name}, {id:name}, ...}, "fromInst":{{id:name}, {id:name}, ...}}, raw[ids]
     """
     FOLDER_RAW_ID = "17JUv2o-fKmFsgg2m65HNO-TMDUdn5Q2U"
     FOLDER_CLEANED_ID = "191OoRTm1ip05Zuk7My-eMa-t9B2IeJbD"
@@ -116,9 +116,10 @@ def updateSheetOnDrive(handler, sheetID, ALL_CLEANED_SHEETS):
 
 def main():
 
+    print(ow.cwd)
     # authenticating Drive, Sheets and GitHub API keys
-    sheetsDriveJson = "creds.json"
-    driveServiceJson = "client_secrets_GDrive-oauth2.json"
+    sheetsDriveJson = "src/pythonScripts/modules/creds.json"
+    driveServiceJson = "src/pythonScripts/modules/client_secrets_GDrive-oauth2.json"
     gitToken = os.environ.get("GIT_TOKEN_SECRET")
     handler = gds.Handler(sheetsDriveJson, driveServiceJson, gitToken)
 
