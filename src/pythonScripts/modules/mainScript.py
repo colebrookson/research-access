@@ -216,12 +216,8 @@ def main():
                             failureLog[sheetID] = [uniName, e, errorMsg]
 
     # logging
-    if len(failureLog) > 0:
-        try:
-            raise Exception
-        except Exception:
-            for key in failureLog.keys():
-                print(key, failureLog[key], sep='\n', end='\n')
+    for key in failureLog.keys():
+        print(key, failureLog[key], sep='\n', end='\n')
 
 
 main()
