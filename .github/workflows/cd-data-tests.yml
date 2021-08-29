@@ -39,4 +39,4 @@ jobs:
     - name: run mainScript.py
       run: python src/pythonScripts/modules/mainScript.py
       env:
-        GIT_TOKEN_SECRETS: ${{ secrets.GIT_TOKEN_SECRET }}
+        GIT_TOKEN_SECRET: ${{ secrets.GIT_TOKEN_SECRET }}
