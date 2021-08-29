@@ -1,9 +1,10 @@
 import GoogleDriveSheets as gds
 import DataChecks as dc
+from io import BytesIO
 import pandas as pd
 import numpy as np
 import os
-from io import BytesIO
+
 
 def getAllFileIDs(handler):
     """
