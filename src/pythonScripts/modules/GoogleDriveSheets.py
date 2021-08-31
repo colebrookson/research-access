@@ -1,11 +1,12 @@
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from Google import Create_Service
+from github import Github
 # from typing import List
 
 class Handler:
 
-    def __init__(self, sheetsDriveCredsJson, driveCredsJson):
+    def __init__(self, sheetsDriveCredsJson, driveCredsJson, gitToken):
         """
         Authenticates client API keys for Google Drive and Google Sheets APIs
         and authenticates oauth2 key for Google Drive
@@ -13,10 +14,13 @@ class Handler:
         # .json files with credentials
         self.sheetsDriveCredsJson = sheetsDriveCredsJson
         self.driveCredsJson = driveCredsJson
+        self.gitToken = gitToken
         # Google Drive and Google Sheets API key authentication
         self.sheetsDriveClient = self.authenticateDriveSheetsAPIKeys(self.sheetsDriveCredsJson)
         # Google Drive oauth2 authentication
         self.driveService = self.authenticateOauth2GDrive(self.driveCredsJson)
+        # github object
+        self.gitService = Github(self.gitToken)
 
     def getSheetsDriveClient(self):
         return self.sheetsDriveClient
@@ -66,6 +70,14 @@ class Handler:
 
         return data
 
+    def getSheetObject(self, sheetID):
+        """
+        Returns the first sheet object (not the data on it) using sheetID
+        """
+        sheetsFile = self.getSheetsDriveClient().open_by_key(sheetID)
+        sheet = sheetsFile.get_worksheet(0)
+        return sheet
+
     def authenticateOauth2GDrive(self, client_secretJson:str):
         """
         Authenticates Google Drive API using oauth2 key from user's .json credential file
@@ -95,6 +107,9 @@ class Handler:
             nextPageToken = response.get('nextPageToken')
 
         return files
+
+    def getRepo(self, repoDir):
+        return self.gitService.get_repo(repoDir)
 
 
 

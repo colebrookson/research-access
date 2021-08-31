@@ -1,5 +1,16 @@
 from DataChecks import *
 import pytest
+import pandas as pd
+
+@pytest.fixture
+def load_data():
+    df = pd.DataFrame({
+        "journal": ["3 BIOTECH", "MOLECULAR BIOLOGY REPORTS", "APPLIED MATHEMATICAL MODELLING", "GENOME", "SCIENCE", "NATURE"],
+        "issn": ["2190-572X", "0301-4851", "0307-904X", "0831-2796", "0036-8075", "0028-0836"],
+        "access": ["1", "1", "0", "1", "0", "1"],
+        "notes": ["some notes", "", "", "", "", ""]
+    })
+    return df
 
 def test_check_issn() -> None:
     pass
@@ -31,4 +42,30 @@ def test_validate_cISSN() -> None:
         assert validate_cISSN(1323-1231) == Exception
         assert validate_cISSN("00916765") == Exception
         assert validate_cISSN("0091-676Y") == Exception
+
+def test_hasNaN(load_data) -> None:
+    df = load_data
+    print(df)
+    assert hasNaN(df) == (False, [])
+    assert hasNaN(df, includeNotes=True) == (True, ["notes"])
+
+    df1 = df.replace("NATURE", np.nan, inplace=False)
+    assert hasNaN(df1) == (True, ["journal"])
+    del df1
+
+    df2 = df.replace("SCIENCE", "", inplace=False)
+    assert hasNaN(df2) == (True, ["journal"])
+    del df2
+
+    df3 = df.replace({"0307-904X": None}, inplace=False)
+    assert hasNaN(df3) == (True, ["issn"])
+    print(df3)
+    del df3
+
+def test_allJournalsCounted(load_data) -> None:
+    df = load_data
+    print(df)
+
+
+
 
