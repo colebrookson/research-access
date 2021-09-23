@@ -117,7 +117,8 @@ def updateSheetOnDrive(handler, sheetID, ALL_CLEANED_SHEETS):
 
 def main():
 
-    print(os.getcwd())
+#     print(os.getcwd())
+    print("Here")
     # authenticating Drive, Sheets and GitHub API keys
     sheetsDriveJson = "src/pythonScripts/modules/creds.json"
     driveServiceJson = "src/pythonScripts/modules/client_secrets_GDrive-oauth2.json"
